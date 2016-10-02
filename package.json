@@ -1,0 +1,31 @@
+{
+  "name": "munivision-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.14.0",
+    "express": "^4.14.0",
+    "xml2json": "^0.10.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "axios-mock-adapter": "^1.6.1",
+    "eslint": "^3.5.0",
+    "eslint-config-standard": "^6.0.1",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "supertest": "^2.0.0"
+  },
+  "ava": {
+    "source": "src/**/*.js",
+    "files": [
+      "src/**/*-test.js"
+    ]
+  }
+}
