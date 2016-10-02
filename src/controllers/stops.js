@@ -20,9 +20,12 @@ function StopsController (req, res) {
           }
         }),
         paths: resp.route.path.map(path => {
-          return {
-
-          }
+          return path.point.map(point => {
+            return {
+              lat: Number(point.lat),
+              lng: Number(point.lon)
+            }
+          })
         })
       }
       res.json(route)

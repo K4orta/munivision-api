@@ -54,7 +54,10 @@ test.cb('Stops route returns a list of paths', t => {
     .expect(resp => {
       t.is(resp.body.paths.length, 17)
       const path = resp.body.paths[0]
+      t.deepEqual(path[0], {
+        lat: 37.765,
+        lng: -122.45656
+      })
     })
     .expect(200, t.end)
 })
-
