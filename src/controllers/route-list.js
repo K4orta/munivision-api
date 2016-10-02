@@ -3,8 +3,7 @@ function RouteListController (req, res) {
   // Fetch the data
   fetchMuni({command: 'routeList'})
     .then(resp => {
-      console.log(resp.data)
-      res.json([])
+      res.json(resp.route)
     })
     .catch(console.log)
 }
