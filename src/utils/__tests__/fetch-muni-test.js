@@ -5,7 +5,7 @@ import fetchMuni from '../fetch-muni'
 
 test.beforeEach(t => {
   t.context = new MockAdapter(axios)
-  t.context.onGet('http://webservices.nextbus.com/service/publicXMLFeed?command=routeList&a=sf-muni')
+  t.context.onGet('http://webservices.nextbus.com/service/publicXMLFeed?a=sf-muni&command=routeList')
     .reply(200,
     `<?xml version="1.0" encoding="utf-8" ?>
       <body>
