@@ -3,7 +3,7 @@ function StopsController (req, res) {
   // Fetch the data
   fetchMuni({
     command: 'routeConfig',
-    route: req.params.route
+    r: req.params.route
   })
     .then(resp => {
       const route = {
@@ -29,6 +29,7 @@ function StopsController (req, res) {
         })
       }
       res.json(route)
+      return route
     })
     .catch(console.log)
 }

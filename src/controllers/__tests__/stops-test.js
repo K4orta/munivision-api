@@ -61,3 +61,4 @@ test.cb('Stops route returns a list of paths', t => {
     })
     .expect(200, t.end)
 })
+
