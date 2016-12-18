@@ -11,7 +11,7 @@ test.beforeEach(t => {
   t.context
     .onGet(formatUrl({
       command: 'routeConfig',
-      route: 'N'
+      r: 'N'
     }))
     .reply(200, stopsStub)
 })
@@ -61,4 +61,3 @@ test.cb('Stops route returns a list of paths', t => {
     })
     .expect(200, t.end)
 })
-
