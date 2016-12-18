@@ -1,10 +1,10 @@
 const fetchMuni = require('../utils/fetch-muni')
-
 function VehiclesController (req, res) {
+  const route = req.params.route
   fetchMuni({
     command: 'vehicleLocations',
-    r: req.params.route,
-    t: 0
+    r: route,
+    t: req.query.time || 0
   }).then(resp => {
     res.json({
       vehicles: resp.vehicle.map(v => {
